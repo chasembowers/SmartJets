@@ -8,8 +8,8 @@ A 2D projectile game where opponents mimick user strategies with increasing skil
 ## Description
 
 The project is in its beginning stages.  Several jets occupy a circular arena.  The jets can move through
-the arena and fire projectiles in any direction at a regular interval.  The user controls one jet and attempts
-to hit enemy jets with its projectiles while dodging their projectiles. More importantly, with each consecutive
+the arena and fire projectiles in any direction at a regular interval.  The user controls one (blue) jet and attempts
+to hit enemy (red) jets with its projectiles while dodging their projectiles. More importantly, with each consecutive
 round of playing, the enemy jets observe and attempt to reproduce the strategy of the user's jet via machine learning.
 With each new round, the enemy jets have access to more data and consequently become more skilled.
 

@@ -24,4 +24,3 @@ Weka - Data Mining and Machine Learning for Java
 Copyright 2015 Chase Bowers
 
 This program is distributed under the terms of the GNU General Public License (LICENSE.txt).
-SOFTWARE.
