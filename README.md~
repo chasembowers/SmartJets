@@ -33,7 +33,7 @@ game states (jet/projectile positions) and corresponding user actions are stored
 encountered by enemy jets into actions.
 
 Currently, an unoptimized Random Forest with a maximum capacity of 10,000 training samples is used to control enemy jets.
-Samples from rounds where the user 
+Samples from rounds where the user lost are discarded.
 
 ## External Packages
 
