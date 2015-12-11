@@ -30,7 +30,9 @@ coordinates of the three closest projectiles and the jet's distance from the ori
 Furthermore, a jet's movement is also described relative to its perspective of the origin to remain consistent
 with feature generation. For example, a clockwise movement anywhere in the arena is labeled identically. These
 game states (jet/projectile positions) and corresponding user actions (angular movement) are stored and used to classify
- future game states encountered by enemy jets into actions.
+ future game states encountered by enemy jets into actions. In this version, enemy projectile trajectories are not
+determined by a machine learning model. Instead, enemy projectiles are simply fired towards the user jet's location when the 
+projectile is fired.
 
 Currently, an unoptimized Random Forest with a maximum capacity of 10,000 training samples is used to control enemy jets.
 Samples from rounds where the user lost are discarded, and the oldest samples are discarded when the number of stored samples
