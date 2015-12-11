@@ -21,7 +21,7 @@ with the arrow or WASD keys and the projectile direction with your mouse.
 
 A set of features is generated to describe every game state for the purpose of machine learning.
 During feature generation, the jet's position is described only by its distance from
-the origin, and the positions of enemy projectiles are described radially, in relation to jet's perspective of the origin. 
+the origin, and the positions of enemy projectiles are described in relation to jet's perspective of the origin. 
 This allows any game state to be generalized to all rotations of that game state
 about the origin and greatly accelerates the learning process. The features presently generated are the relative polar 
 coordinates of the three closest projectiles and the jet's distance from the origin.
