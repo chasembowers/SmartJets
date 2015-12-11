@@ -13,9 +13,10 @@ to hit enemy (red) jets with its projectiles while dodging their projectiles. Mo
 round of playing, the enemy jets observe and attempt to reproduce the strategy of the user's jet via machine learning.
 With each new round, the enemy jets have access to more data and consequently become more skilled.
 
-##How To Play
+## How To Play
 
-This project does not yet have an executable. Run the Main class to test the game.
+This project does not yet have an executable. Run the Main class to test the game. Control the movement of your jet
+with the arrow or WASD keys and the projectile direction with your mouse.
 
 ## Machine Learning Implementation
 
@@ -31,7 +32,8 @@ with feature generation. For example, a clockwise movement anywhere in the arena
 game states (jet/projectile positions) and corresponding user actions are stored and used to classify future game states 
 encountered by enemy jets into actions.
 
-Currently, an unoptimized Random Forest with a maximum capacity of 10,000 training samples is used to control enemy jets. 
+Currently, an unoptimized Random Forest with a maximum capacity of 10,000 training samples is used to control enemy jets.
+Samples from rounds where the user 
 
 ## External Packages
 

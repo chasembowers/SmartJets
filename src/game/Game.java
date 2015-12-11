@@ -41,10 +41,7 @@ public class Game extends JPanel implements ActionListener {
 	 */
     private final int ARENA_RADIUS = 250;
     
-    /**
-     * Millisecond delay between each retrieval of user input and corresponding game update
-     */
-    private final int DELAY = 5;
+    /**sss int DELAY = 5;
     
     private Timer timer;
     
