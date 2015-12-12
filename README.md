@@ -19,7 +19,7 @@ with the arrow or WASD keys and the projectile direction with your mouse. Each r
 
 ## Machine Learning Implementation
 
-A set of features is generated to describe every game state. During feature generation, the jet's position is described only
+A set of features is generated to describe each game state for every point in time. During feature generation, the jet's position is described only
 by its distance from the origin, and the positions of enemy projectiles are described in relation to jet's perspective of the origin. 
 This allows any game state to be generalized to all rotations of that game state
 about the origin and greatly accelerates the learning process. The features presently generated are the relative polar 
@@ -32,7 +32,7 @@ features, generated from jet/projectile positions, and corresponding labels (ang
  future game states encountered by enemy jets into actions. In this version, enemy projectile trajectories are not
 determined by a machine learning model. Instead, enemy projectiles are simply fired towards the user jet's location at the
 time of firing. Jets are limited to one life per round so that only behavior which has not produced a collision with an enemy
-projectile can be observed.
+projectile can be observed by enemy jets.
 
 Currently, an unoptimized Random Forest with a maximum capacity of 10,000 training samples is used to control enemy jets.
 Samples from rounds where the user lost are discarded, and the oldest samples are discarded when the number of stored samples
