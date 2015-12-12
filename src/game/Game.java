@@ -41,8 +41,10 @@ public class Game extends JPanel implements ActionListener {
 	 */
     private final int ARENA_RADIUS = 250;
     
-    /**sss int DELAY = 5;
-    
+    /**
+     * Interval in milliseconds with which the timer calls actionPerformed 
+     */
+    private final int DELAY = 5;
     private Timer timer;
     
     /**
