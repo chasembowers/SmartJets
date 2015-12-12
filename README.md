@@ -15,7 +15,7 @@ via machine learning. With each new round, the enemy jets have access to more da
 ## How To Play
 
 This project does not yet have an executable. Run the Main class to test the game. Control the movement of your jet
-with the arrow or WASD keys and the projectile direction with your mouse. The round restarts every time your jet has been hit by a projectile and ends when all enemy jets have been hit by projectiles.
+with the arrow or WASD keys and the projectile direction with your mouse. Each round restarts every time your jet has been hit by a projectile and ends when all enemy jets have been hit by projectiles.
 
 ## Machine Learning Implementation
 
@@ -40,6 +40,8 @@ exceeds capacity.
 ## External Packages
 
 Weka - Data Mining and Machine Learning for Java
+
+
 
 Copyright 2015 Chase Bowers
 
