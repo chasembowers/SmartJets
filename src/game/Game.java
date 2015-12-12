@@ -31,9 +31,9 @@ import learn.MyFeatureGenerator;
 public class Game extends JPanel implements ActionListener {
 	
 	/**
-     * Given samples of game states and user actions and produces actions for non-user Jets 
-     * via machine learning.
-     */
+	 * Given samples of game states and user actions and produces actions for non-user Jets 
+	 * via machine learning.
+	 */
     private JetTrainer jt = new JetTrainer(new MyFeatureGenerator(), new RandomForest(), 10000); 
 
 	/**
@@ -116,8 +116,11 @@ public class Game extends JPanel implements ActionListener {
     private void restart(boolean train) {
     	
     	timer.stop();
+    	
+    	//train JetTrainer or remove Samples from last round
     	if (train) jt.train();
     	else jt.removeNewSamples(ticks);
+    	
     	for (Jet j: jets) {
     		j.reset();
     	}
@@ -143,10 +146,13 @@ public class Game extends JPanel implements ActionListener {
     	
     	g.setColor(j.getTeam());
     	
+    	//Paint Jet j
     	double jetX = j.getX() - JET_RADIUS + ARENA_RADIUS;
         double jetY = -j.getY() - JET_RADIUS + ARENA_RADIUS;
     	if (!j.isDead()) g.fillOval((int) jetX, (int) jetY, 2*JET_RADIUS, 2*JET_RADIUS);
-        for (Projectile p: j.getProjectiles()) {
+        
+    	//Paint each of Jet j's Projectiles
+    	for (Projectile p: j.getProjectiles()) {
         	double pX = p.getX() - PROJECTILE_RADIUS + ARENA_RADIUS;
             double pY = -p.getY() - PROJECTILE_RADIUS + ARENA_RADIUS;
         	g.fillOval((int) pX, (int) pY, 2*PROJECTILE_RADIUS, 2*PROJECTILE_RADIUS);
