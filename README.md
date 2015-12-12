@@ -31,8 +31,7 @@ with feature generation. For example, a clockwise movement anywhere in the arena
 features, generated from jet/projectile positions, and corresponding labels (angular movement) are stored and used to classify
  future game states encountered by enemy jets into actions. In this version, enemy projectile trajectories are not
 determined by a machine learning model. Instead, enemy projectiles are simply fired towards the user jet's location at the
-time of firing. Jets are limited to one life per round so that only behavior which has not produced a collision with an enemy
-projectile can be observed by enemy jets.
+time of firing.
 
 Currently, an unoptimized Random Forest with a maximum capacity of 10,000 training samples is used to control enemy jets.
 Samples from rounds where the user lost are discarded, and the oldest samples are discarded when the number of stored samples
