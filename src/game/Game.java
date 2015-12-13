@@ -119,7 +119,7 @@ public class Game extends JPanel implements ActionListener {
     	
     	//train JetTrainer or remove Samples from last round
     	if (train) jt.train();
-    	else jt.removeNewSamples(ticks);
+    	else jt.flushSampleBuffer();
     	
     	for (Jet j: jets) {
     		j.reset();
