@@ -30,15 +30,14 @@ import learn.MyFeatureGenerator;
  */
 public class Game extends JPanel implements ActionListener {
 	
-	/**
-	 * Given samples of game states and user actions and produces actions for non-user Jets 
-	 * via machine learning.
-	 */
-    private JetTrainer jt = new JetTrainer(new MyFeatureGenerator(), new RandomForest(), 10000); 
-
-	/**
-	 * Radius of circular arena that Jets fight inside
-	 */
+    /**
+     * Given samples of game states and user actions and produces actions for non-user Jets
+     */
+    private JetTrainer jt = new JetTrainer(new MyFeatureGenerator(), new RandomForest(), 10000);
+    
+    /**
+     * Radius of circular arena that Jets fight inside of
+     */
     private final int ARENA_RADIUS = 250;
     
     /**
